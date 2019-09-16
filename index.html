@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Test</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@1.2.2/dist/ress.min.css">
+
+  <style>
+    :root {
+      --gray: gray;
+      --border-width: 2px;
+
+      padding: 1rem;
+      font-size: 16px;
+    }
+
+    body {
+      font-size: sans-serif;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      min-height: 200px;
+      padding: 1rem;
+      border: var(--border-width) solid var(--gray);
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    textarea:read-only {
+      outline: none;
+    }
+
+    hr {
+      width: 100%;
+      height: var(--border-width);
+      margin: 20px 0;
+      border: 0;
+      background-color: var(--gray);
+    }
+  </style>
+
+  <script type="module">
+    import html from './scripts/html.js';
+    import React from 'https://dev.jspm.io/react';
+    import ReactDOM from 'https://dev.jspm.io/react-dom';
+    import LiCreater from './scripts/containers/LiCreater.js';
+
+    const App = () => {
+      return html`<div>
+        <${LiCreater} />
+      </div>`
+    }
+
+    ReactDOM.render(html`<${App} />`, document.getElementById('App'));
+  </script>
+</head>
+
+<body>
+  <div id="App"></div>
+</body>
+
+</html>
