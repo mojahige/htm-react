@@ -1,11 +1,18 @@
-import html from "../html.js";
-import ReactPopup from "https://dev.jspm.io/reactjs-popup";
+import html from '../html.js';
+import ReactPopup from 'https://dev.jspm.io/reactjs-popup';
 
-const Modal = ({ children }) => {
+/**
+ * @param {object} props
+ * @param {object} React.createElement でできたやつ
+ * @param {string|undefined} openLabel
+ */
+const Modal = ({ children, openLabel }) => {
   return html`
   <${ReactPopup}
     trigger=${html`
-      <button type="button">How to use</button>
+      <button className="ModalTriggerButton" type="button">
+        ${openLabel ? openLabel : 'Modal open'}
+      </button>
     `}
     modal
     closeOnDocumentClick

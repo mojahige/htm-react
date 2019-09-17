@@ -1,5 +1,5 @@
-import html from "../html.js";
-import Modal from "../containers/Modal.js";
+import html from '../html.js';
+import Modal from '../containers/Modal.js';
 
 const HowToUse = () => {
   const Description = () => html`
@@ -15,7 +15,7 @@ const HowToUse = () => {
   `;
 
   return html`
-    <${Modal}>
+    <${Modal} openLabel="How to use?">
       <${Description} />
     <//>
   `;
