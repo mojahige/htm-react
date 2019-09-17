@@ -16,10 +16,10 @@
     }
 
     body {
-      font-size: sans-serif;
+      font-family: sans-serif;
     }
 
-    textarea {
+    .ToolTextarea {
       display: block;
       width: 100%;
       min-height: 200px;
@@ -29,7 +29,7 @@
       font-size: 13px;
     }
 
-    textarea:read-only {
+    .ToolTextarea:read-only {
       outline: none;
     }
 
@@ -40,6 +40,18 @@
       border: 0;
       background-color: var(--gray);
     }
+
+    .HowToUse {
+      padding-left: 1.2em;
+    }
+
+    .HowToUse li + li {
+      margin-top: 1em;
+    }
+
+    .popup-content {
+      padding: 1rem !important;
+    }
   </style>
 
   <script type="module">
@@ -47,9 +59,12 @@
     import React from 'https://dev.jspm.io/react';
     import ReactDOM from 'https://dev.jspm.io/react-dom';
     import LiCreater from './scripts/containers/LiCreater.js';
+    import HowToUse from './scripts/components/HowToUse.js';
 
     const App = () => {
-      return html`<div>
+      return html`
+      <div>
+        <${HowToUse} />
         <${LiCreater} />
       </div>`
     }

@@ -6,15 +6,15 @@ const LiCreater = () => {
   const [value, setValue] = React.useState("");
 
   /**
-   * @param {string} value 
+   * @param {string} value
    */
   const onChange = value => {
     setValue(value);
   };
 
   /**
-   * @param {string} accumulator 
-   * @param {string} currentValue 
+   * @param {string} accumulator
+   * @param {string} currentValue
    * @returns {string}
    */
   const transReducer = (accumulator, currentValue) => {
@@ -24,7 +24,7 @@ const LiCreater = () => {
   };
 
   /**
-   * @param {string} originalValue 
+   * @param {string} originalValue
    */
   const transformValue = originalValue => {
     return originalValue

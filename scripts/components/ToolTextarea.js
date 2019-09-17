@@ -17,6 +17,7 @@ const ToolTextarea = ({ value, onChange, readonly, placeholder }) => {
   return !readonly
     ? html`
         <textarea
+          className="ToolTextarea"
           value=${value}
           onChange=${onChangeHandler}
           placeholder=${placeholder ? placeholder : ''}
@@ -25,6 +26,7 @@ const ToolTextarea = ({ value, onChange, readonly, placeholder }) => {
       `
     : html`
         <textarea
+          className="ToolTextarea"
           value=${value}
           readOnly=${readonly}
           placeholder=${placeholder ? placeholder : ''}
